@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, jsonify, abort
 from flask_sqlalchemy import SQLAlchemy
-from types import CoroutineType
 from dotenv import load_dotenv
 import os
 
@@ -307,6 +306,10 @@ def delete_patient(mrn):
     db.session.delete(patient)
     db.session.commit()
     return jsonify({'result': True})
+
+
+
+
 
 
 
